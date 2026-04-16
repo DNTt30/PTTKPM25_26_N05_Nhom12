@@ -46,13 +46,23 @@ src/main/resources/application.properties
 Ví dụ:
 
 spring.datasource.url=jdbc:mysql://localhost:3306/food_delivery
+
 spring.datasource.username=root
+
 spring.datasource.password=your_password
+
 ### 3. Chạy ứng dụng
+
 mvn spring-boot:run
+
 ### 4. Truy cập
+
 http://localhost:8080
-👨‍💻 Nhóm phát triển
+
+###👨‍💻 Nhóm phát triển
+
 Dương Ngọc Tú
+
 Đinh Thị Như Quỳnh
+
 Ngô Minh Quân
