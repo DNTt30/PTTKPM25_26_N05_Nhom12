@@ -1,67 +1,80 @@
 # 🍔 Food Delivery Management System
-**Hệ thống quản lý đặt đồ ăn trực tuyến**
+
 
 ---
 
 ## 📌 Giới thiệu
 
-Đây là ứng dụng web hỗ trợ đặt đồ ăn trực tuyến, cho phép người dùng tìm kiếm món ăn, đặt hàng và theo dõi trạng thái đơn.
-
-Hệ thống kết nối **Khách hàng – Nhà hàng – Shipper**, giúp quản lý và xử lý đơn hàng hiệu quả.
-
----
+Hệ thống cung cấp giải pháp đặt món, quản lý đơn hàng và kết nối hiệu quả giữa **Khách hàng – Nhà hàng – Shipper**. Dự án được xây dựng với mục tiêu tối ưu hóa trải nghiệm người dùng và quy trình vận hành đơn hàng.
 
 ## ⚙️ Chức năng chính
 
-- Khách hàng: xem menu, đặt hàng, theo dõi đơn  
-- Admin/Nhà hàng: quản lý món ăn và đơn hàng  
-- Shipper: giao hàng và cập nhật trạng thái  
+- **Khách hàng:** Tìm kiếm món ăn, đặt hàng, quản lý giỏ hàng và theo dõi trạng thái đơn hàng.
+- **Nhà hàng/Admin:** Quản lý thực đơn, xử lý đơn hàng và cập nhật thông tin cửa hàng.
+- **Shipper:** Nhận đơn, cập nhật lộ trình và trạng thái giao hàng.
 
 ---
 
-## 🛠️ Công nghệ
+## 🛠️ Công nghệ sử dụng
 
-- Spring Boot  
-- MySQL  
-- Spring Security  
-- Maven  
+- **Backend:** Java 17, Spring Boot 3.3.0
+- **Database:** MySQL (Aiven Cloud / Local)
+- **Security:** Spring Security & JWT
+- **Build Tool:** Maven
 
 ---
 
 ## 🚀 Hướng dẫn chạy dự án
 
-### 1. Clone project
+### 1. Yêu cầu hệ thống
+- **Java JDK 17** trở lên.
+- **MySQL** (nếu chạy database cục bộ).
+- IDE khuyên dùng: IntelliJ IDEA hoặc VS Code.
 
+### 2. Clone dự án
+Mở Terminal và chạy lệnh:
 ```bash
 git clone https://github.com/DNTt30/Food_Delivery_System.git
-cd Food_Delivery_System\gs-serving-web-content-main\complete
+cd Food_Delivery_System/gs-serving-web-content-main/complete
 ```
-### 2. Cấu hình database
 
-Chỉnh file:
+### 3. Cấu hình Database
+Chỉnh sửa cấu hình kết nối tại file:  
+`src/main/resources/application.properties`
 
-src/main/resources/application.properties
-
-Ví dụ:
-
+```properties
 spring.datasource.url=jdbc:mysql://localhost:3306/food_delivery
-
-spring.datasource.username=root
-
+spring.datasource.username=your_username
 spring.datasource.password=your_password
+```
 
-### 3. Chạy ứng dụng
+### 4. Khởi chạy ứng dụng
+Sử dụng Maven Wrapper (không cần cài đặt Maven thủ công):
 
-mvn spring-boot:run
+**Đối với Windows (PowerShell/CMD):**
+```powershell
+.\mvnw spring-boot:run
+```
 
-### 4. Truy cập
+**Đối với Linux/MacOS:**
+```bash
+chmod +x mvnw
+./mvnw spring-boot:run
+```
 
-http://localhost:8080
+### 5. Truy cập ứng dụng
+Sau khi ứng dụng khởi chạy thành công, truy cập:  
+👉 [http://localhost:8080](http://localhost:8080)
 
-###👨‍💻 Nhóm phát triển
+---
 
-Dương Ngọc Tú -22010052
+## 👨‍💻 Đội ngũ phát triển
 
-Đinh Thị Như Quỳnh -23010844
+| Tên thành viên | Mã sinh viên |
+| :--- | :--- |
+| **Dương Ngọc Tú** | 22010052 |
+| **Đinh Thị Như Quỳnh** | 23010844 |
+| **Ngô Minh Quân** | 23017112 |
 
-Ngô Minh Quân - 23017112
+---
+*Dự án thuộc học phần thực hành Phát triển ứng dụng Web.*
